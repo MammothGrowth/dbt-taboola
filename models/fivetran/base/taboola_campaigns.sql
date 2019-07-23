@@ -5,8 +5,8 @@ with base as (
         id,
         name,
 
-        to_date(start_date, 'yyyy-mm-dd') as start_date,
-        nullif(end_date, '9999-12-31') as end_date,
+        start_date,
+        nullif(end_date, '9999-12-31'::DATE) as end_date,
 
         is_active,
         lower(status) as status,
