@@ -15,7 +15,7 @@ with base as (
 
         nullif(tracking_code, 'None') as tracking_code
 
-    from {{var('campaigns_table')}}
+    from {{source('taboola_ads', 'CAMPAIGN')}}
 
 
 ),

@@ -9,7 +9,8 @@ with performance_table as(
         spent as spend,
         currency
 
-    from {{var('performance_table')}}    
+    from {{source('taboola_ads', 'CAMPAIGN_SITE_DAY_REPORT')}}
+ 
 )
 select
 
