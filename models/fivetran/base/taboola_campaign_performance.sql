@@ -20,7 +20,7 @@ select
     sum(impressions) impressions,
     sum(clicks) clicks,
     sum(conversions) conversions,
-    sum(spend) spend,
+    sum(spend) spend
 
 from performance_table
 {{ dbt_utils.group_by(3) }}
